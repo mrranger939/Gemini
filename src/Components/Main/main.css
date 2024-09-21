@@ -3,6 +3,7 @@
     min-height: 100vh;
     padding-bottom: 15vh;
     position: relative;
+    background-color: #1a1f36;
 }
 .main .nav{
     display: flex;
@@ -10,7 +11,10 @@
     justify-content: space-between;
     font-size: 22px;
     padding: 20px;
-    color: #585858;
+    color: #f5f7fa;
+}
+i{
+    color: #f5f7fa;
 }
 .main .nav i{
     width: 40px;
@@ -30,7 +34,7 @@
     padding: 20px;
 }
 .main .greet span{
-    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    background: -webkit-linear-gradient(16deg, #f5f7fa, #ff6161);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -43,7 +47,7 @@
 .main .card{
     height: 200px;
     padding: 15px;
-    background-color: #f0f4f9;
+    background-color: #2a2e4a;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
@@ -59,12 +63,12 @@
     right: 10px;
 }
 .main .card p{
-    color: #585858;
+    color: #f5f7fa;
     font-size: 17px;
 }
 
 .main .card:hover{
-background-color: #dfe4ea;
+background-color: #3b3f66;
 }
 .main-bottom{
     position: absolute;
@@ -107,6 +111,7 @@ background-color: #dfe4ea;
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
+    color: #d0d3dc;
 }
 .result {
     padding: 0px 5%;

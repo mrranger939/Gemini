@@ -17,7 +17,7 @@ const MarkdownRenderer = ({ markdownContent }) => {
   return (
     <div>
      
-      <p dangerouslySetInnerHTML={{ __html: htmlContent }}></p>
+      <p style={{color:'white'}} dangerouslySetInnerHTML={{ __html: htmlContent }}></p>
     </div>
   );
 };

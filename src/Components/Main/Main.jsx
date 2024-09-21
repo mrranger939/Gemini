@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './main.css'
 import { Context } from '../../Context/Context'
 import MarkdownRenderer from './Marked'
+import ai from '../../assets/ai-unscreen (1).gif'
 export default function Main() {
 
     const {onSent, recentPrompt, showResult,setRecentPrompt, loading, resultData, setInput, input} = useContext(Context)
@@ -15,7 +16,7 @@ export default function Main() {
   return (
     <div className='main'>
         <div className="nav">
-            <p>Gemini</p>
+            <p>Vision AI</p>
             <i className="fa-solid fa-user-astronaut"></i>
         </div>
         <div className="main-container">
@@ -24,7 +25,7 @@ export default function Main() {
             <>
             <div className="greet">
                 <p><span>Hello, Dev.</span></p>
-                <p>How can I help you today? </p>
+                <p color='#d0d3dc'>How can I help you today? </p>
             </div>
             <div className="cards">
                 <div onClick={()=>{loadPrompt("What are some creative ways to increase productivity during work hours?")}} className="card" >
@@ -50,12 +51,12 @@ export default function Main() {
             <div className='result'>
                 <div className="result-title">
                     <i className="fa-solid fa-user-astronaut"></i>
-                    <p>{recentPrompt}</p>
+                    <p style={{color:'white'}}>{recentPrompt}</p>
                 </div>
                 <div className="result-data">
                     <div>
 
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width={30} height={30}>
+{/*                 <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width={30} height={30}>
                     <path
                         d="M16 8.016A8.522 8.522 0 008.016 16h-.032A8.521 8.521 0 000 8.016v-.032A8.521 8.521 0 007.984 0h.032A8.522 8.522 0 0016 7.984v.032z"
                         fill="url(#prefix__paint0_radial_980_20147)"
@@ -74,7 +75,9 @@ export default function Main() {
                         <stop offset=".672" stopColor="#1BA1E3" />
                         </radialGradient>
                     </defs>
-                    </svg>
+                    </svg> */}
+                    
+                    <img src={ai} style={{height:'30px', width:'30px'}} alt="" />
                     </div>
                     {loading ?
                     
@@ -94,11 +97,12 @@ export default function Main() {
 
 
 <div className="main-bottom">
-    <div className="search-box">
+    <div style={{background:'#2e335a'}} className="search-box">
         <input 
             type="text" 
             onChange={(e) => setInput(e.target.value)} 
             value={input} 
+            style={{background:'#2e335a', color:'#f5f7fa'}}
             placeholder="Enter prompt here"
             onKeyDown={(e) => {
                 if (e.key === "Enter") {
@@ -108,7 +112,7 @@ export default function Main() {
         />
         <div>
             {input ? (
-                <i 
+                <i style={{color:'white'}}
                     onClick={() => { onSent(); }} 
                     className="fa-solid fa-paper-plane"
                 ></i>
@@ -116,7 +120,7 @@ export default function Main() {
         </div>
     </div>
     <p className="bottom-info">
-        Code by Mohammed Shujath Nawaz used Google Gemini Model 1.5 Api for API chat @2024
+        Code by Mohammed Shujath Nawaz Vision AI @2024
     </p>
 </div>
 
